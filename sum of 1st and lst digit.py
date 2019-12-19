@@ -1,0 +1,5 @@
+n=int(input())
+s=str(n)
+f=int(s[0])
+l=int(s[-1])
+print('sum of the digit is',f+l)
