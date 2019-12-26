@@ -1,4 +1,3 @@
 n=int(input())
 s=str(n)
-l=len(s)
-print(l)
+print('the number of digit is :',len(s))
