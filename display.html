@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script>
+            var player1=localStorage.getItem("s1").split(",")
+            var player2=localStorage.getItem("s2").split(",")
+            if (player1>player2){
+                document.write("player 1 wins\n")
+                document.write("total runs:",player1)
+            }
+            else{
+                document.write("player 2 wins\n")
+                document.write("total runs:",player2)
+            }
+        </script>
+    </body>
+</html>

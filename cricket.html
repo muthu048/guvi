@@ -1,0 +1,93 @@
+<html>
+    <body>
+        
+        <div>
+            <form>
+                player1:<br>
+                <input type="text" name="player1" id="player1"><br>
+              </form>
+        </div>
+        <div>
+            <form>
+                this ball1:<br>
+                <input type="text" name="this ball1" id="ball1"><br>
+              </form>
+        </div>
+        <div>
+            <button type="button" 
+            onclick="strike1()" id="strike1">strike1</button>
+        </div>
+        <script>
+            var clicked=0;
+            var total=0;
+            function strike1(){
+                var run=(Math.floor(Math.random() * 10))%7;
+                if (run>=1){
+                    document.getElementById("ball1").value = run ;
+                    total=total+run;
+                    clicked++; //increment
+                    document.getElementById("player1").value = total;
+                    if (clicked == 18){
+                        document.getElementById("strike1").disabled=true;
+                        document.getElementById("strike2").disabled=false;
+                        localStorage.setItem("s1",total)
+                        alert("innings ended")
+                    }
+                    
+
+                 }
+            }
+            
+                 
+        </script>
+        <div>
+            <form>
+                player2:<br>
+                <input type="text" name="player2" id="player2"><br>
+              </form>
+        </div><div>
+            <form>
+                this ball:<br>
+                <input type="text" name="this ball" id="ball2"><br>
+              </form>
+        </div>
+        <div>
+            <button type="button" 
+            onclick="strike()" id="strike2" disabled=true>strike2
+            
+        </button>
+        </div>
+        <script>
+            var clicked2=0;
+            var total2=0;
+            function strike(){
+                var run2=(Math.floor(Math.random() * 10))%7;
+                if (run2>=1){
+                    document.getElementById("ball2").value = run2 ;
+                    total2=total2+run2;
+                    clicked2++; //increment
+                    document.getElementById("player2").value = total2;
+                    if (clicked2 == 18){
+                        document.getElementById("strike2").disabled=true;
+                        localStorage.setItem("s2",total2)
+                        alert("game ends")
+                    }
+                    
+                 }
+            }
+        </script>
+        <div>
+            <form>
+                <a href="/Users/Saravanamurugan/Documents/display.html">
+                 <button type="button" 
+                 id="result">result
+                 </button>
+             </a>
+
+            </form>
+            
+        </div>
+   
+
+     </body>
+</html>
