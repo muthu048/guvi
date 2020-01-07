@@ -1,7 +1,9 @@
 let obj ={};
-let list = [["make", "Ford"], ["model", "Mustang"], ["year", 1964]];
+let list = [];
+function listoobj(list){
 for(const [key, value] of list)
 {
 	obj[key]=value;
 }
 alert(JSON.stringify(obj));
+}
