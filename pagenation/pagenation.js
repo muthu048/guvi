@@ -531,7 +531,7 @@ for(let row=0;row<5;row++){
 }
 
 
-function updateData(pageNo){
+function updatePage(pageNo){
     document.getElementById(pageNo).setAttribute('class', 'active')
     let end = pageNo*5
     let start = end-5
@@ -552,11 +552,13 @@ for(let page=1;page<=20;page++){
     let anchor = document.createElement('a')
     anchor.setAttribute('href','#')
     anchor.setAttribute('id', page)
-    anchor.setAttribute('onclick', 'updateData('+page+')')
+    anchor.setAttribute('onclick', 'updatePage('+page+')')
     anchor.innerHTML = page
     paginationDiv.append(anchor)
 }
 document.body.appendChild(paginationDiv)
 
 
-updateData(1)
+updatePage(1)
+
+
